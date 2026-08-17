@@ -3,90 +3,148 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>「カラダ予報」プライバシーポリシー</title>
+    <title>「カラダ予報」プライバシーポリシー・サポート窓口</title>
     <style>
+        :root {
+            --primary: #14B8A6;
+            --primary-dark: #0D9488;
+            --text: #1F2937;
+            --text-light: #4B5563;
+            --bg: #F8FAFC;
+            --card-bg: #FFFFFF;
+            --border: #E2E8F0;
+        }
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
             line-height: 1.7;
-            color: #333;
-            max-width: 700px;
-            margin: 40px auto;
-            padding: 0 20px;
-            background-color: #fafafa;
+            margin: 0;
+            padding: 24px 16px;
         }
         .container {
-            background: #ffffff;
-            padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            max-width: 720px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            padding: 36px 28px;
+            border-radius: 16px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+            border: 1px solid var(--border);
         }
         h1 {
             font-size: 24px;
-            border-bottom: 2px solid #eaeaea;
+            font-weight: 800;
+            color: var(--text);
+            margin-top: 0;
+            margin-bottom: 8px;
             padding-bottom: 12px;
+            border-bottom: 2px solid var(--primary);
+        }
+        .updated-date {
+            font-size: 13px;
+            color: var(--text-light);
             margin-bottom: 24px;
-            color: #111;
         }
         h2 {
             font-size: 18px;
+            font-weight: 700;
             margin-top: 32px;
-            margin-bottom: 16px;
-            color: #222;
-            border-left: 4px solid #007aff;
+            margin-bottom: 12px;
+            color: var(--primary-dark);
+            border-left: 4px solid var(--primary);
             padding-left: 10px;
         }
-        h3 {
-            font-size: 15px;
-            margin-top: 20px;
-            margin-bottom: 8px;
-            color: #333;
-        }
-        p, li {
+        p {
             font-size: 14.5px;
-            color: #444;
+            color: var(--text-light);
         }
-        ul {
-            padding-left: 20px;
+        .data-item {
+            margin-bottom: 16px;
+            background: #F0FDFA;
+            padding: 14px;
+            border-radius: 10px;
+            border: 1px solid #CCFBF1;
         }
-        .date {
-            font-size: 13px;
-            color: #888;
-            margin-bottom: 30px;
+        .data-title {
+            font-weight: bold;
+            color: var(--primary-dark);
+            margin-bottom: 4px;
+        }
+        .support-card {
+            background: #F0FDFA;
+            border: 1.5px solid var(--primary);
+            border-radius: 12px;
+            padding: 20px;
+            margin-top: 24px;
+            text-align: center;
+        }
+        .support-button {
+            display: inline-block;
+            background-color: var(--primary);
+            color: #FFFFFF !important;
+            font-weight: bold;
+            font-size: 15px;
+            padding: 12px 24px;
+            border-radius: 9999px;
+            text-decoration: none;
+            margin-top: 12px;
+            box-shadow: 0 4px 6px -1px rgba(20, 184, 166, 0.3);
+            transition: background-color 0.2s;
+        }
+        .support-button:hover {
+            background-color: var(--primary-dark);
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>「カラダ予報」プライバシーポリシー</h1>
-        <p class="date">最終更新日: 2026年8月9日</p>
-        
-        <p>提供者は、本アプリにおけるユーザーの情報の取り扱いについて、以下のとおりプライバシーポリシー（以下「本ポリシー」といいます。）を定めます。</p>
 
-        <h2>1. 取得する情報およびその利用目的</h2>
-        <p>本アプリでは、提供する機能に応じて以下の情報を取得・利用します。</p>
-        <ul>
-            <li><strong>体調ログ・体重データ・生理周期データ</strong><br>
-            利用目的: アプリ内での体調管理グラフの表示、パーソナライズされたアドバイスおよび予報の生成。<br>
-            保管場所: これらのデータは、ユーザーの端末内の安全なローカルデータベース（SwiftData）にのみ保存され、当方のサーバーを含む外部の第三者に送信・収集されることは一切ありません。</li>
-            
-            <li><strong>位置情報（GPS）</strong><br>
-            利用目的: ユーザーの現在地の気象データ（気温、気圧、湿度、花粉レベル、黄砂、PM2.5等）を自動取得し、体調予報を生成するために利用します。<br>
-            取り扱い: 位置情報は気象データ取得のAPI通信のパラメータとしてのみ使用され、当方のサーバーや第三者に追跡・記録・保存されることはありません。</li>
-            
-            <li><strong>Bluetooth機能</strong><br>
-            利用目的: 体組成計（ChocoZAP等）からの測定データをBluetooth経由で本アプリに自動入力するために利用します。<br>
-            取り扱い: Bluetooth接続および受信データは、ユーザーの端末内での数値転記にのみ使用され、外部に送信されることはありません。</li>
-            
-            <li><strong>生体認証（Face ID）およびパスコード</strong><br>
-            利用目的: アプリ内のプライバシー保護（画面ロック）のために使用します。<br>
-            取り扱い: 認証処理はiOSのシステム標準機能（LocalAuthentication）を介して安全に行われ、当方や本アプリがユーザーの生体情報やパスコードを取得・保持することはありません。</li>
-        </ul>
+<div class="container">
+    <h1>「カラダ予報」プライバシーポリシー</h1>
+    <div class="updated-date">最終更新日: 2026年8月17日</div>
 
-        <h2>2. 第三者提供・外部送信の有無</h2>
-        <p>本アプリは、取得した個人情報を外部のサーバーへ送信したり、第三者に提供・販売することは一切ありません。すべてのデータはユーザーのデバイス内で完結して安全に管理されます。</p>
+    <p>提供者は、本アプリ「カラダ予報」におけるユーザーの情報の取り扱いについて、以下のとおりプライバシーポリシー（以下「本ポリシー」といいます。）を定めます。</p>
 
-        <h2>3. お問い合わせ</h2>
-        <p>本ポリシーに関するお問い合わせ、または本アプリに関するご質問は、App StoreのサポートURLに記載されている開発者連絡先までお願いいたします。</p>
+    <h2>1. 取得する情報およびその利用目的</h2>
+    <p>本アプリでは、提供する機能に応じて以下の情報を取得・利用します。</p>
+
+    <div class="data-item">
+        <div class="data-title">・体調ログ・体重データ・生理周期データ</div>
+        <p style="margin: 4px 0 0 0;"><strong>利用目的:</strong> アプリ内での体調管理グラフの表示、パーソナライズされたアドバイスおよび予報の生成。<br>
+        <strong>保管場所:</strong> これらのデータは、ユーザーの端末内の安全なローカルデータベース（SwiftData）にのみ保存され、当方のサーバーを含む外部の第三者に送信・収集されることは一切ありません。</p>
     </div>
+
+    <div class="data-item">
+        <div class="data-title">・位置情報（GPS）</div>
+        <p style="margin: 4px 0 0 0;"><strong>利用目的:</strong> ユーザーの現在地の気象データ（気温、気圧、湿度、花粉レベル、黄砂、PM2.5等）を自動取得し、体調予報を生成するために利用します。<br>
+        <strong>取り扱い:</strong> 位置情報は気象データ取得のAPI通信パラメータとしてのみ使用され、当方のサーバーや第三者に追跡・記録・保存されることはありません。</p>
+    </div>
+
+    <div class="data-item">
+        <div class="data-title">・Bluetooth機能</div>
+        <p style="margin: 4px 0 0 0;"><strong>利用目的:</strong> 体組成計（ChocoZAP等）からの測定データをBluetooth経由で本アプリに自動入力するために利用します。<br>
+        <strong>取り扱い:</strong> Bluetooth接続および受信データは、ユーザーの端末内での数値転記にのみ使用され、外部に送信されることはありません。</p>
+    </div>
+
+    <div class="data-item">
+        <div class="data-title">・生体認証（Face ID）およびパスコード</div>
+        <p style="margin: 4px 0 0 0;"><strong>利用目的:</strong> アプリ内のプライバシー保護（画面ロック）のために使用します。<br>
+        <strong>取り扱い:</strong> 認証処理はiOSのシステム標準機能（LocalAuthentication）を介して安全に行われ、当方や本アプリがユーザーの生体情報やパスコードを取得・保持することはありません。</p>
+    </div>
+
+    <h2>2. 第三者提供・外部送信の有無</h2>
+    <p>本アプリは、取得した個人情報を外部のサーバーへ送信したり、第三者に提供・販売することは一切ありません。すべてのデータはユーザーのデバイス内で完結して安全に管理されます。</p>
+
+    <h2>3. お問い合わせ・サポート窓口</h2>
+    <p>本ポリシーに関するお問い合わせ、または本アプリに関するご質問・不具合報告・ご意見などは、以下のお問い合わせフォームよりお気軽にご連絡ください。</p>
+
+    <div class="support-card">
+        <p style="margin: 0 0 8px 0; font-weight: bold; color: var(--text);">【「カラダ予報」サポート窓口】</p>
+        <p style="margin: 0; font-size: 13.5px; color: var(--text-light);">ご質問やご要望は以下のフォームから24時間受け付けております。</p>
+        <a class="support-button" href="https://docs.google.com/forms/d/e/1FAIpQLSdlxMpCz5wvirp-X8LBdrJuT58UtP3eO8mkJsfrzm396mSUEQ/viewform" target="_blank" rel="noopener noreferrer">
+            お問い合わせフォームを開く
+        </a>
+    </div>
+</div>
+
 </body>
 </html>
